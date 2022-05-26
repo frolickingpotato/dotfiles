@@ -22,7 +22,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec --no-startup-id rofi -show combi
 
 # start power menu
-bindsym $mod+p exec --no-startup-id rofi -show p -modi p:~/.local/bin/rofi-power-menu -yoffset -274 -xoffset -474
+bindsym $mod+p exec --no-startup-id rofi -show p -modi p:~/.config/rofi/rofi-power-menu/rofi-power-menu -yoffset -274 -xoffset -474
+
+# start bluetooth menu
+
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
 
 # change focus
 bindsym $mod+h focus left
