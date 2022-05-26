@@ -1,3 +1,12 @@
+#..••°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°••..
+#✬ File:            .Xresources                          ✬
+#✬ Author:          Albert Kerelis                       ✬
+#✬ Source:          https://github.com/frolickingpotato/dotfiles/.Xresources    
+#✬ Description:     My Color Scheme						 ✬
+#✬ Created:         Wed May 25 2022 22:38:15 CDT         ✬
+#✬ Proper Home:     ~/.Xresources		                 ✬
+#°°••.................................................••°
+
 *background: #37423d
 *foreground: #a37a77
 *cursorColor: #c4623d
