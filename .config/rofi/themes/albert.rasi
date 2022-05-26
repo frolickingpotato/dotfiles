@@ -3,7 +3,7 @@
 #..••°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°••..
 #✬ File:			albert.rasi						 	 ✬
 #✬ Author:			Albert Kerelis						 ✬
-#✬ Source:			Not on github						 ✬
+#✬ Source:			https://github.com/frolickingpotato/dotfiles/blob/master/.config/rofi/themes/albert.rasi
 #✬ Description:		My Rofi theme						 ✬
 #✬ Created:			Wed May 25 2022 22:38:15 CDT		 ✬
 #✬ Proper Home:		~/.config/rofi/themes/				 ✬
@@ -58,6 +58,8 @@
     alternate-urgent-foreground: @urgent-foreground;
     selected-urgent-background:  @albert-red-light;
     selected-urgent-foreground:  @urgent-foreground;
+
+	font:						 "Hack Nerd Font 12";
 }
 
 @import "gruvbox-common.rasi"
