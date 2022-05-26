@@ -1,15 +1,8 @@
 call plug#begin()
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-jedi'
 Plug 'justinmk/vim-sneak'
-Plug 'edkolev/tmuxline.vim'
 Plug 'ap/vim-css-color'
 Plug 'itchyny/lightline.vim'
-Plug 'ryanosis/vim-devicons'
-Plug 'SirVer/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhinz/vim-startify'
 call plug#end()
