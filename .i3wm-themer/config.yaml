@@ -1,0 +1,5 @@
+i3-config: /home/albert/.config/i3/config
+polybar-config: /home/albert/.config/polybar/config
+xresources: /home/albert/.Xresources
+nitrogen-config: /home/albert/.config/nitrogen/bg-saved.cfg
+wallpaper-path: .i3wm-themer/wallpaper

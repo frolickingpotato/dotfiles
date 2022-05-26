@@ -1,0 +1,62 @@
+{
+    "xresources": {
+        "background": "#37423d",
+        "foreground": "#a37a77",
+        "cursorcolor": "#c4523d",
+
+    	"color0": "#37423d",
+    	"color1": "#6c886f",
+    	"color2": "#8a9b71",
+    	"color3": "#895255",
+    	"color4": "#a1755c",
+    	"color5": "#895255",
+    	"color6": "#6c886f",
+    	"color7": "#a37a77",
+    	"color8": "#c4623d",
+    	"color9": "#94643e",
+    	"color10": "#aab283",
+    	"color11": "#c69459",
+    	"color12": "#ae8b6b",
+    	"color13": "#818890",
+    	"color14": "#8dbd6c",
+    	"color15": "#a03703",
+	"rofi.color-window": "#1e1e20, #2c5159, #2c5159",
+	"rofi.color-normal": "#1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159",
+	"rofi.color-active": "#1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159",
+	"rofi.color-urgent": "#1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159"
+
+    },
+    "i3wm": {
+        "client.background": "#37423d",
+        "client.focused": "#895255 #37423d #819b71 #895255 #895255",
+        "client.unfocused": "#aab283 #37423d #819b71 #aab283 #aab283",
+        "client.focused_inactive": "#a37a77 #37423d #819b71 #a37a77 #a37a77",
+        "client.urgent": "#a03703 #37423d #819b71 #a03703 #a03703",
+        "client.placeholder": "#8a9b71 #37423d #819b71 #8a9b71 #8a9b71"
+    },
+    "polybar": {
+        "background": "#37423d",
+        "foreground": "#a37a77",
+	"modules-left": "i3 backlight spotify spotify-prev spotify-play-pause spotify-next info-hackspeed updates-pacman-aurhelper",
+        "modules-center": "",
+        "modules-right": "cpu weather date wlan speedtest pipewire battery-combined-udev powermenu", 
+        "label-unfocused-background": "#6e675f",
+        "label-unfocused-foreground": "#37423d",
+        "label-mode-background": "#37423d",
+        "label-mode-foreground": "#bcd8c6",
+        "label-focused-foreground": "#a37a77",
+        "label-focused-background": "#7f5f5d",
+        "label-visible-background": "#1c543b",
+        "label-visible-foreground": "#1c543b",
+        "format-foreground": "#1E272B",
+  	"format-background": "#a37a77",
+  	"label-open-foreground": "#9d6a47",
+  	"label-close-foreground": "#9d6a47",
+   	"label-separator-foreground": "#9d6a47",
+   	"format-connected-foreground": "#c4623d",
+   	"format-connected-background": "#aab283",
+  	"format-connected-prefix-foreground": "#1E272B",
+ 	"ramp-signal-foreground": "#1E272B"    },
+
+    "wallpaper": "014.png"
+}
