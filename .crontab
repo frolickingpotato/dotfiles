@@ -1,2 +1,3 @@
 * * * * 0 pacman -Qqen > ~/.pkglist.txt; pacman -Qqem > ~/.extpkglist.txt
-* * * * 0 echo "Time to update system! Please run fullUpdate" > ~/.
+* * * * 0 echo "Time to update system! Please run fullUpdate" > ~/.updateTimer
+* * * * 0 config add ~/.pkglist.txt ~/.extpkglist.txt; config commit -m "weekly package commit"; config push
