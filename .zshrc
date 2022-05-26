@@ -1,4 +1,13 @@
-# If you come from bash you might have to change your $PATH.
+##..••°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°••..
+#✬ File:            .zshrc		                         ✬
+#✬ Author:          Albert Kerelis                       ✬
+#✬ Source:          https://github.com/frolickingpotato/dotfiles/blob/master/.zshrc    
+#✬ Description:     My zshrc	                         ✬
+#✬ Created:         Wed May 25 2022 22:38:15 CDT         ✬
+#✬ Proper Home:     ~/.zshrc			                 ✬
+#°°••.................................................••°
+
+#If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH:home/albert/.local/bin
 
 # Path to your oh-my-zsh installation.
