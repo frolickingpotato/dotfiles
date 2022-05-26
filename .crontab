@@ -1,0 +1,2 @@
+* * * * 0 pacman -Qqen > ~/.pkglist.txt; pacman -Qqem > ~/.extpkglist.txt
+* * * * 0 echo "Time to update system! Please run fullUpdate" > ~/.
