@@ -1,0 +1,64 @@
+/* ==========================================================================
+
+#..••°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°••..
+#✬ File:			albert.rasi						 	 ✬
+#✬ Author:			Albert Kerelis						 ✬
+#✬ Source:			Not on github						 ✬
+#✬ Description:		My Rofi theme						 ✬
+#✬ Created:			Wed May 25 2022 22:38:15 CDT		 ✬
+#✬ Proper Home:		~/.config/rofi/themes/				 ✬
+#°°••.................................................••°°
+
+   Based on the Gruvbox color scheme for Vim by morhetz
+   https://github.com/morhetz/gruvbox
+
+========================================================================== */
+
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Theme Colors*/
+    albert-bg0-soft:     #37423d;
+    albert-bg1:          #aab283;
+    albert-bg3:          #a37a77;
+    albert-fg0:          #6c886f;
+    albert-fg1:          #895255;
+    albert-red-dark:     #cc241d;
+    albert-red-light:    #fb4934;
+    albert-tan-dark:	 #94643e;
+    albert-tan-light:	 #ae8b6b;
+    albert-gray:         #818890;
+
+    background:                  @albert-bg0-soft;
+    background-color:            @background;
+    foreground:                  @albert-fg1;
+    border-color:                @albert-bg3;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @albert-fg0;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @albert-bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @albert-bg3;
+    selected-normal-foreground:  @background;
+
+    active-background:           @albert-tan-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @albert-tan-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @albert-red-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @albert-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+@import "gruvbox-common.rasi"
+
