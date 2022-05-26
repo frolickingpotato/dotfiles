@@ -125,7 +125,7 @@ format-spacing = 1
 
 label-open = 
 label-open-foreground = #9d6a47
-label-close =  cancel
+label-close =  cancel
 label-close-foreground = #9d6a47
 label-separator = |
 label-separator-foreground = #9d6a47
