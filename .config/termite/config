@@ -1,0 +1,100 @@
+[options]
+#allow_bold = true
+#audible_bell = false
+#bold_is_bright = true
+#cell_height_scale = 1.0
+#cell_width_scale = 1.0
+#clickable_url = true
+#clickable_url_ctrl = false
+#dynamic_title = true
+#fullscreen = true
+#icon_name = terminal
+#mouse_autohide = false
+#scroll_on_output = false
+#scroll_on_keystroke = true
+word_char_exceptions = -=&#:/.?@+~_%;
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = lynx
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+#cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+#scrollbar = off
+
+# Whether to prefer using the GTK dark theme variant.
+#gtk_dark_theme = false
+
+# Enable smart copy. ^C will copy if text has been selected. ^V will paste. It
+# is no longer possible to send a ^V to the running program when this option is
+# enabled.
+smart_copy = true
+
+[colors]
+# If both of these are unset, cursor falls back to the foreground color,
+# and cursor_foreground falls back to the background color.
+#cursor = #dcdccc
+#cursor_foreground = #dcdccc
+
+foreground = #a37a77
+foreground_bold = #895255
+#background = #37423d
+
+#20% background transparency (requires a compositor)
+background = rgba(55, 66, 61, 0.8)
+
+# If unset, will reverse foreground and background
+#highlight = #2f2f2f
+
+# Colors from color0 to color254 can be set
+color0 = #37423d
+color1 = #6c886f
+color2 = #8a9b71
+color3 = #895255
+color4 = #a1755c
+color5 = #895255
+color6 = #6c886f
+color7 = #a37a77
+color8 = #c4623d
+color9 = #94643e
+color10 = #aab283
+color11 = #c69459
+color12 = #ae8b6b
+color13 = #818890
+color14 = #8dbd6c
+color15 = #a03703
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s
+
+[options]
+font = Iosevka Extended 12
