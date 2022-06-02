@@ -1,11 +1,11 @@
-#..••°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°••..
-#✬ File:            .Xresources                          ✬
-#✬ Author:          Albert Kerelis                       ✬
-#✬ Source:          https://github.com/frolickingpotato/dotfiles/.Xresources    
-#✬ Description:     My Color Scheme						 ✬
-#✬ Created:         Wed May 25 2022 22:38:15 CDT         ✬
-#✬ Proper Home:     ~/.Xresources		                 ✬
-#°°••.................................................••°
+/*#..••°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°••..
+✬ File:            .Xresources                          ✬
+✬ Author:          Albert Kerelis                       ✬
+✬ Source:          https://github.com/frolickingpotato/dotfiles/.Xresources    
+✬ Description:     My Color Scheme						 ✬
+✬ Created:         Wed May 25 2022 22:38:15 CDT         ✬
+✬ Proper Home:     ~/.Xresources		                 ✬
+°°••.................................................••°*/
 
 *background: #37423d
 *foreground: #a37a77
@@ -20,13 +20,13 @@
 *color6: #6c886f
 *color7: #a37a77
 *color8: #c4623d
-*color9: #94643e
+*color9: #8dbd6c
 *color10: #aab283
 *color11: #c69459
 *color12: #ae8b6b
 *color13: #818890
 *color14: #8dbd6c
-*color15: #a03703
+*color15: #917C78
 
 Xcursor.theme: ArcDusk-cursors
 Xcursor.size: 16
