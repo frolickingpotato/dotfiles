@@ -7,26 +7,42 @@
 ✬ Proper Home:     ~/.Xresources		                 ✬
 °°••.................................................••°*/
 
-*background: #37423d
-*foreground: #a37a77
-*cursorColor: #c4623d
+! special
+*.foreground:   #a37a77
+*.background:   #37423d
+*.cursorColor:  #a37a77
 
-*color0: #37423d
-*color1: #6c886f
-*color2: #8a9b71
-*color3: #895255
-*color4: #a1755c
-*color5: #895255
-*color6: #6c886f
-*color7: #a37a77
-*color8: #c4623d
-*color9: #8dbd6c
-*color10: #aab283
-*color11: #c69459
-*color12: #ae8b6b
-*color13: #818890
-*color14: #8dbd6c
-*color15: #917C78
+! black
+*.color0:       #37423d
+*.color8:       #a1755c
+
+! red
+*.color1:       #8dbd6c
+*.color9:       #6c886f
+
+! green
+*.color2:       #8a9b71
+*.color10:      #aab283
+
+! yellow
+*.color3:       #c4623d
+*.color11:      #c69459
+
+! blue
+*.color4:       #a1755c
+*.color12:      #ae8b6b
+
+! magenta
+*.color5:       #5b6a7c
+*.color13:      #818890
+
+! cyan
+*.color6:       #19a473
+*.color14:      #278482
+
+! white
+*.color7:       #895255
+*.color15:      #a37a77
 
 Xcursor.theme: ArcDusk-cursors
 Xcursor.size: 16
