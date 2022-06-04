@@ -53,7 +53,7 @@ get_duration() {
 }
 
 KEY="2114c9e637ce9969e10339708f130ee5"
-CITY="Portland"
+CITY="Chicago"
 UNITS="imperial"
 SYMBOL="°"
 
