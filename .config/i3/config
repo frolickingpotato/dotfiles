@@ -22,7 +22,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec --no-startup-id rofi -show combi
 
 # start power menu
-bindsym $mod+p exec --no-startup-id rofi -show p -modi p:~/.config/rofi/rofi-power-menu/rofi-power-menu -yoffset -274 -xoffset -474
+bindsym $mod+p exec --no-startup-id rofi -show p -modi p:~/.config/rofi/rofi-power-menu/rofi-power-menu
 
 # start bluetooth menu
 
@@ -53,7 +53,8 @@ bindsym $mod+Shift+Right move right
 # split orientation
 bindsym $mod+Ctrl+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+# commendted this so I could have $mod+q free for qrcode
+# bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -338,3 +339,18 @@ exec xrandr --output eDP1 --set "Broadcast RGB" "Full"
 
 # run compositor for sexy transparent windows
 exec picom
+
+# start audio server -- pipewire is killing my performance, so we're back to pulseaudio
+exec pulseaudio
+
+#qr code thing
+bindsym $mod+q exec termite -e /home/albert/.local/bin/mkcode.py
+for_window [title="/home/albert/.local/bin/mkcode.py"] floating enable
+for_window [title="/home/albert/.local/bin/mkcode.py"] resize set 500 700
+for_window [title="/home/albert/.local/bin/mkcode.py"] move position 1413 30
+
+#wifi window
+bindsym $mod+Shift+w exec "termite -e '/home/albert/.local/bin/wifi.sh'"
+for_window [title="/home/albert/.local/bin/wifi.sh"] floating enable
+for_window [title="/home/albert/.local/bin/wifi.sh"] resize set 850 300
+for_window [title="/home/albert/.local/bin/wifi.sh"] move position 1000 60
