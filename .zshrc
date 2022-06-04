@@ -122,8 +122,13 @@ alias fullUpdate="~/.scripts/fullUpdate.sh"
 alias packageBrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias vim="nvim"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias la="ls -A"
+alias mv="mv -i"
+alias rm="rm -i"
 
 #bling!
-
 pfetch
 cat ~/.updateTimer
+
+#Use vim keys
+bindkey -v
