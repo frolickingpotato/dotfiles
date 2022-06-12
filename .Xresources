@@ -10,7 +10,7 @@
 ! special
 *.foreground:   #a37a77
 *.background:   #37423d
-*.cursorColor:  #a37a77
+*.cursorColor:  #19a473
 
 ! black
 *.color0:       #37423d
@@ -29,7 +29,7 @@
 *.color11:      #c69459
 
 ! blue
-*.color4:       #a1755c
+*.color4:       #8a9b71
 *.color12:      #ae8b6b
 
 ! magenta
@@ -38,11 +38,13 @@
 
 ! cyan
 *.color6:       #19a473
-*.color14:      #278482
+*.color14:      #89bd6c
 
 ! white
 *.color7:       #895255
 *.color15:      #a37a77
 
-Xcursor.theme: ArcDusk-cursors
-Xcursor.size: 16
+rofi.kb-row-up:                      Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab
+rofi.kb-row-down:                    Down,Control+j
+rofi.kb-mode-next:                   Shift+Right,Control+Tab,Control+l
+rofi.kb-mode-previous:               Shift+Left,Control+Shift+Tab,Control+h
