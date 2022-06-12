@@ -114,7 +114,8 @@ export LC_ALL=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias please="sudo"
 alias yeet="rm"
-alias sneak="sudo openvpn AirVPN_America_UDP-443.ovpn"
+alias sneak="sudo openvpn .AirVPN_America_UDP-443.ovpn"
+alias sneakq="sudo nohup openvpn .AirVPN_America_UDP-443.ovpn"
 alias yay="yay --aur"
 alias i3-rerun="python ~/.i3wm-themer/i3wm-themer.py -c ~/.i3wm-themer/config.yaml --load ~/.i3wm-themer/themes/014.json"
 alias cody="oneko"
@@ -125,6 +126,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias la="ls -A"
 alias mv="mv -i"
 alias rm="rm -i"
+alias ssh="TERM=xterm-256color ssh"
 
 #bling!
 pfetch
