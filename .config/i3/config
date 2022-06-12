@@ -13,7 +13,7 @@ font xft:URWGothic-Book 11
 
 floating_modifier $mod
 
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # Window kill command
 bindsym $mod+Shift+q kill
@@ -49,6 +49,9 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+bindsym $mod+Shift+p move workspace output right
+bindsym $mod+Shift+o move workspace output left
 
 # split orientation
 bindsym $mod+Ctrl+h split h;exec notify-send 'tile horizontally'
@@ -97,26 +100,15 @@ set $ws6 6
 set $ws7 7
 set $ws8 8
 
-# This whole background changing thing didn't work, but I'm leaving it in here in case I ever want to return to it. Moving containers to different workspaces didn't work right. It would create a new workspace with the same label as the one you wanted to move it to, but it wouldn't be accessible when you tried to move to the workspace again. You'd have to use rofi to navigate to the window you wanted. Very strange behaviour... maybe appending the feh stuff to the move container to workspace command would fix??
-
-# alias for setting background
-# This "feh" business is meant to change the background depending on desktop.
-# It doesn't work when you use workspace next / previous, but I don't use that often.
-# Commented out, see note above
-# set $feh exec --no-startup-id feh --bg-fill 
-
-# Set a background to a workspace by appending "$feh path/to/background_image
-# Ex: "bindsym $mod+1 workspace $ws1 ; $feh ~/.wp/014.png"
-
-# switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
+# switch to workspace and set new background
+bindsym $mod+1 workspace $ws1; exec nitrogen --set-zoom-fill $HOME/.config/nitrogen/014.png
+bindsym $mod+2 workspace $ws2; exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/plants
+bindsym $mod+3 workspace $ws3; exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/birds
+bindsym $mod+4 workspace $ws4; exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/art
+bindsym $mod+5 workspace $ws5; exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/people
+bindsym $mod+6 workspace $ws6; exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/animals
+bindsym $mod+7 workspace $ws7; exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/landscapes
+bindsym $mod+8 workspace $ws8; exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/sexy
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -166,6 +158,7 @@ for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="Steam"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -221,14 +214,13 @@ mode "resize" {
 }
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-exec --no-startup-id nm-applet
-# exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+exec --no-startup-id nitrogen --set-zoom-fill $HOME/.config/nitrogen/014.png; sleep 1; compton -b
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
+# geoclue hasn't been working nice with redshift, so instead of fetching location data from mozilla, I've just hardcoded the location.
+# PORTLAND
+#exec redshift -l 45.523064:-122.67648
+# CHICAGO
+exec redshift -l 41.92900:-87.70289
 
 # Theme Stuff
 # class                 border  bground text    indicator child_border
@@ -243,7 +235,7 @@ client.background #37423d
 # Gaps
 gaps inner 10
 gaps outer -4
-gaps top 20
+gaps top 23
 smart_gaps on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
@@ -293,20 +285,26 @@ bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
 bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 
 # Resizing by 10
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+Ctrl+Shift+Right resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
+
+# Set volume control
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%; exec ls -d ~/.fuks/* |sort -R |head -n1| xargs play
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%; exec ls -d ~/.fuks/* |sort -R |head -n1| xargs play
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-# set brightness control
+# Set brightness control
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
-#set media control
+# Set media control
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# touchpad on and off controller on laptop with Fn+<touchpad control functional key>
+# Touchpad on and off controller on laptop with Fn+<touchpad control functional key>
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
@@ -323,17 +321,6 @@ exec oneko
 # Syndaemon prevents mouse presses while typing. d runs as daemon, t only ignores touches and scrolls not mouse movements, and i 1 sets idle time to 1 second after the last keypress.
 exec syndaemon -dti 1
 
-# Start power manager
-# Settings can be changed with mate-power-preferences
-exec mate-power-manager
-
-# turn redshift on
-# geoclue hasn't been working nice with redshift, so instead of fetching location data from mozilla, I've set redshift to just use Portland's coordinates.
-# PORTLAND
-#exec redshift -l 45.523064:-122.67648
-# CHICAGO
-exec redshift -l 41.92900:-87.70289
-
 # make the screen not go real wonky
 exec xrandr --output eDP1 --set "Broadcast RGB" "Full"
 
@@ -341,16 +328,19 @@ exec xrandr --output eDP1 --set "Broadcast RGB" "Full"
 exec picom
 
 # start audio server -- pipewire is killing my performance, so we're back to pulseaudio
-exec pulseaudio
+exec --no-startup-id pulseaudio
 
 #qr code thing
-bindsym $mod+q exec termite -e /home/albert/.local/bin/mkcode.py
+bindsym $mod+q exec alacritty -e /home/albert/.local/bin/mkcode.py
 for_window [title="/home/albert/.local/bin/mkcode.py"] floating enable
 for_window [title="/home/albert/.local/bin/mkcode.py"] resize set 500 700
 for_window [title="/home/albert/.local/bin/mkcode.py"] move position 1413 30
 
 #wifi window
-bindsym $mod+Shift+w exec "termite -e '/home/albert/.local/bin/wifi.sh'"
+bindsym $mod+Shift+w exec "alacritty -e '/home/albert/.local/bin/wifi.sh'"
 for_window [title="/home/albert/.local/bin/wifi.sh"] floating enable
 for_window [title="/home/albert/.local/bin/wifi.sh"] resize set 850 300
 for_window [title="/home/albert/.local/bin/wifi.sh"] move position 1000 60
+
+#owo???
+bindsym $mod+Shift+n exec nitrogen --set-zoom-fill --random $HOME/.wallpapers/.nsfw/
