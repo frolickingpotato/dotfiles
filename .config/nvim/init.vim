@@ -30,6 +30,9 @@ set scrolloff=5				" doesn't let cursor hit end of screen
 set sidescrolloff=8
 set splitright				" open new split panes to right and below
 set splitbelow
+set cmdheight=2				" More space for displaying messages
+set shortmess+=c			" Don't pass messages to |ins-completion-menu|. (https://github.com/neoclide/coc.nvim)
+set signcolumn=number
 
 "============================================================================================
 "								KEYBINDINGS
@@ -59,6 +62,9 @@ nnoremap <C-l> <C-w>l
 " Keep lines selected after indenting
 vnoremap < <gv
 vnoremap > >gv
+
+" For when you forget to sudo vim a write-protected file
+cmap w!! w !sudo tee "%" > /dev/null
 
 "============================================================================================
 "								PLUGINS
@@ -93,8 +99,19 @@ nmap f <Plug>Sneak_s
 nmap F <Plug>Sneak_S
 
 let g:lightline = {
-	  \ 'colorscheme': 'wombat',
-      \ }
-
+			\ 'colorscheme': 'wombat',
+			\ }
 
 let g:NERDCreateDefaultMappings =1
+
+" COC mappings
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
