@@ -1,0 +1,52 @@
+window:
+  dynamic_title: true
+
+colors:
+  primary:
+    background: '0x37423d'
+    foreground: '0xa37a77'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x895255'
+    cursor: '0x19a473'
+
+  normal:
+    black:   '0x37423d'
+    red:     '0x8dbd6c'
+    green:   '0x8a9b71'
+    yellow:  '0xc4623d'
+    blue:    '0xBF6F69'
+    magenta: '0x5b6a7c'
+    cyan:    '0x19a473'
+    white:   '0x895255'
+
+  bright:
+    black:   '0xa1755c'
+    red:     '0x19a473'
+    green:   '0xaab283'
+    yellow:  '0xc69459'
+    blue:    '0xae8b6b'
+    magenta: '0x818890'
+    cyan:    '0x89bd6c'
+    white:   '0xa37a77'
+
+#Font
+font:
+  normal:
+    family: Iosevka
+    style: Regular
+
+  bold:
+    family: Iosevka
+    style: Bold
+
+  italic:
+    family: Iosevka
+    style: Oblique
+
+  bold_italic:
+    family: Iosevka
+    style: Bold Oblique
+
+  size: 5
