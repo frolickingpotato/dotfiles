@@ -73,8 +73,8 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+Shift+f focus mode_toggle
 
-# toggle sticky
-bindsym $mod+Shift+s sticky toggle
+# toggle smart_gaps
+bindsym $mod+Shift+s exec ~/.scripts/toggle_smart_gaps.sh
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -236,7 +236,7 @@ client.background #37423d
 gaps inner 10
 gaps outer -4
 gaps top 23
-smart_gaps on
+#smart_gaps on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -304,9 +304,17 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Media control with numpad
+bindsym KP-Up exec playerctl play-pause
+bindsym KP-Prior exec playerctl next
+bindsym KP-Home exec playerctl previous
+
 # Touchpad on and off controller on laptop with Fn+<touchpad control functional key>
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
+
+# Print screen
+bindsym  exec scrot ~
 
 # set keyrepeat to be sufficiently fast so I can zoooooom
 exec xset r rate 200 40
