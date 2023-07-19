@@ -1,0 +1,7 @@
+sanitise tridactyllocal tridactylsync
+
+set smoothscroll true
+set modeindicatorshowkeys true
+set modeindicator false
+set theme juno
+set colours juno
