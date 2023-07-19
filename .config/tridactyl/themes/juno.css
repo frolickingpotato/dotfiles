@@ -12,7 +12,7 @@
   --purple: #895255;
   --red: #ff5555;
   --yellow: #f1fa8c;
-  --font: monospace; /*"FiraCode Nerd Font Mono";*/
+  --font: Iosevka;
 
   --tridactyl-fg: var(--fg);
   --tridactyl-bg: var(--bg);
