@@ -1,0 +1,144 @@
+* {
+		font-size: 16px;
+		font-family: Iosevka;
+}
+
+/* define colors and blinkies*/
+@define-color back			#37423d;
+@define-color fore			#a37a77;
+@define-color sage			#aab283;
+@define-color camel			#ae8b6b;
+@define-color rust			#c4623d;
+@define-color rose			#875255;
+@define-color forest		#6c886f;
+
+@keyframes blink-warning {
+	70% {
+		color: @fore;
+	}
+	to {
+		color: @camel;
+		background-color: @rust;
+	}
+}
+
+@keyframes blink-critical {
+	70% {
+		color: @fore;
+	}
+	to {
+		color: white;
+		background-color: red;
+	}
+}
+
+@keyframes blink-happy {
+	70% {
+		color: @fore;
+	}
+	to {
+		color: @sage;
+	}
+}
+
+/* the whole bar */
+window#waybar {
+    background-color: transparent;
+}
+/* module groups */
+.modules-left {
+	background-color: @back;
+	color: @fore;
+	border-radius: 10px;
+	border: 1px solid @sage;
+	margin: 0px 0 0 5px;
+}
+.modules-right {
+	background-color: @back;
+	color: @fore;
+	border-radius: 10px;
+	border: 1px solid @sage;
+	margin: 0 5px 0 0;
+}
+tooltip {
+	background-color: @back;
+	border: 1px solid @sage;
+}
+
+tooltip label {
+	color: @fore;
+}
+
+/* Module styles*/
+
+#clock, #cpu, #battery, #backlight, #memory, #mode, #network, #pulseaudio {
+	background-color: @back;
+	color: @fore;
+	padding: 0px 2px 0px 2px;
+	margin: 0px 2px 0px 2px;
+}
+
+#battery {
+	margin-right: 5px;
+}
+
+#battery.discharging.warning {
+	animation-name: blink-warning;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#battery.discharging.critical {
+	animation-name: blink-critical;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#battery.charging {
+	animation-name: blink-happy;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#clock {
+	border: 1px solid @sage;
+	border-radius: 10px;
+	padding: 0 2px 0 2px;
+}
+
+#memory {
+	border-radius: 10px;
+	padding: 0 0 0 5px;
+}
+
+#mpris {
+	border-radius: 10px;
+	padding: 0 5px 0 5px;
+}
+
+#tags button {
+	box-shadow: inset 0 -3px transparent;
+	background: @back;
+	color: @fore;
+	border: none;
+	border-radius: 0;
+	padding: 0 5px;
+	margin: 0 5px 0 5px;
+}
+
+#tags button:hover {
+	background-color: @forest;
+	color: transparent;
+}
+
+#tags button.focused {
+	background-color: @rose;
+	color: @sage;
+}
+

@@ -39,9 +39,6 @@ set undodir=~/.local/local/share/nvim/undoFiles/
 " git push wiki on write
 :autocmd BufWritePost *.wiki execute "! nohup sh -c 'cd ~/Documents/Notes/vimwiki ; git add ./*; git commit -m \"write hook\"; git push' &"
 
-:autocmd BufWritePost ~/.config/*,~/.i3/*,~/.scripts/*,.Xresources,.crontab,.extpkglist.txt,.gitconfig,.pkglist.txt,.xinitrc,.zshrc,.README.md execute "! nohup sh -c '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME push'"
-
-
 "=========================================================================================
 "								KEYBINDINGS
 "=========================================================================================
@@ -111,11 +108,14 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 " Rust language stuff
 Plug 'rust-lang/rust.vim'
+" Closes delimiters (quotations, brackets, etc.)
+Plug 'Raimondi/delimitMate'
 call plug#end()
 
 "=========================================================================================
 "									PLUGIN OPTIONS
 "=========================================================================================
+
 
 " Let plugins use filetype information
 filetype plugin on
