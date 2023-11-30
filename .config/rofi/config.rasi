@@ -1,1 +1,5 @@
+configuration {
+	modi: "window,drun,combi";
+	combi-modes: "window,drun";
+}
 @theme "~/.config/rofi/themes/albert.rasi"
